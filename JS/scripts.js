@@ -3,6 +3,15 @@ $(function () {
     //When the page loads, the pokemon info card should be hidden by default
     $("#pokemonInfoCard").hide();
 
+
+    $("#pokemonInput").keypress(function (event) {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if (keycode == '13') {
+            $("#search").click()
+            event.preventDefault();
+        }
+    });
+
     // set up the event handler for when the search button is clicked
     $("#search").click(function () {
         // Get the input from the search bar

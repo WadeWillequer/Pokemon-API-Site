@@ -10,10 +10,13 @@ $(function () {
 
         //remove old info from pokemon information list
         $("#pokemonInformationList").html("");
-        
+
+        $("#pokemonInput").val("");
+
         getPokemonInfo(pokemonNamerOrID);
 
     });
+
 
     function determineBackgroundColor(type) {
         switch (type) {
